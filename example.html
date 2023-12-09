@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>お問い合わせ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+            <h1>お問い合わせフォーム</h1>
+            <form method="post" action="send_email.php">
+              <div class="item">
+                <input type="text" class="inputs" name="name" placeholder="名前" required/>
+                <input type="email" class="inputs" name="email" placeholder="メールアドレス" required/>
+                <textarea class="textarea" name="message" placeholder="内容内容が'無いよう'ですつってなwww" required></textarea>
+
+                <input type="checkbox" class="check-box" id="confirmation" required> 私は<a style="color: #ff0000;" href="https://files.piennu777.jp/server/tos/">利用規約</a>や<a style="color: #ff0000;" href="https://files.piennu777.jp/server/privacy/">プライバシーポリシー</a>を読み、理解しました。
+                
+                <br>
+                <input type="submit" class="send" value="問い合わせ" />
+                <input type="hidden" name="token" value="<?php echo $token; ?>">
+              </div>
+            </form>
+</body>
+</html>
